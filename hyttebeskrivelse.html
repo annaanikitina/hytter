@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html lang="no">
+
+	<head>
+
+		<meta charset="utf-8">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- bootstrap Latest compiled and minified CSS -->
+
+		<link rel="stylesheet" href="bootstrap.min.css">
+
+		<!-- jQuery library -->
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+		<!-- bootstrap Latest compiled JavaScript -->
+
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+		<!-- hyttekatalog logic -->
+
+		<link rel="stylesheet" type="text/css" href="styles.css">
+
+
+
+		<title>Hyttebeskrivelse</title>
+
+	</head>
+
+	<body>
+	hei
+	
+<script>
+		$(document).ready(function(){			
+
+	var txt = "";
+	var hytteid = this.id;
+	
+	$("#p").append(hytteid);
+ });	
+</script>
+<!--
+<script>
+		$(document).ready(function(){			
+
+	var txt = "";
+	var hytteid = this.id;
+	$("#p").append(hytteid);
+	
+
+	console.log(this);
+
+	$.ajax({
+
+		type:"GET",
+
+		url:"hyttekatalog4.xml",
+
+		dataType: "xml",
+
+		success: function(xml) {
+		
+			var textfil = $(this).find("hytteside").text();
+			$(xml).find(hytteid).each(function(){
+
+				txt += "<p><img src='" + $(this).find("bilde1").text()+ "' height = 50 width = 40 ></p>" + "<br>" + "<p><img src='" + $(this).find("bilde2").text()+ "' height = 50 width = 40 ></p>" + "<br>" + "<p><img src='" + $(this).find("bilde3").text()+ "' height = 50 width = 40 ></p>"; 
+				
+
+			});
+			
+			$("#p").load(textfil);
+			$("#p").append(txt);
+			
+
+		}
+
+	});
+
+  }); 
+</script>-->
+
+	<p> </p>
+	</body>
+	</html>
